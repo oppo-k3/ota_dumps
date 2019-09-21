@@ -1,0 +1,11 @@
+google_patch=20190805
+ota-id=CPH1955EX_11.A.02_0020_201908101823
+ota-property-files=metadata:69:288         
+ota-required-cache=0
+ota-type=BLOCK
+ota_version=CPH1955EX_11.A.02_0020_201908101823
+patch_type=1
+post-timestamp=1565434990
+pre-device=OP486B
+version_name=CPH1955EX_11_A.02
+wipe=0

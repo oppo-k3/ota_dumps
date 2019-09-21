@@ -1,0 +1,64 @@
+getprop("ro.product.device") == "OP486B" || abort("E3004: This package is for \"OP486B\" devices; this is a \"" + getprop("ro.product.device") + "\".");
+getprop("ro.product.name") == "CPH1955" ||abort("E3004: This package is for \"CPH1955\" product; this is a \"" + getprop("ro.product.name") + "\".");
+show_progress(0.650000, 0);
+ui_print("Patching system image unconditionally...");
+block_image_update("/dev/block/bootdevice/by-name/system", package_extract_file("system.transfer.list"), "system.new.dat.br", "system.patch.dat") ||
+  abort("E1001: Failed to update system image.");
+show_progress(0.100000, 0);
+ui_print("Patching vendor image unconditionally...");
+block_image_update("/dev/block/bootdevice/by-name/vendor", package_extract_file("vendor.transfer.list"), "vendor.new.dat.br", "vendor.patch.dat") ||
+  abort("E2001: Failed to update vendor image.");
+show_progress(0.050000, 5);
+package_extract_file("boot.img", "/dev/block/bootdevice/by-name/boot");
+show_progress(0.200000, 10);
+
+# ---- radio update tasks ----
+
+ui_print("Patching firmware images...");
+ifelse(msm.boot_update("main"), (
+package_extract_file("firmware-update/abl.img", "/dev/block/bootdevice/by-name/abl");
+package_extract_file("firmware-update/xbl.img", "/dev/block/bootdevice/by-name/xbl");
+package_extract_file("firmware-update/xbl_config.img", "/dev/block/bootdevice/by-name/xbl_config");
+package_extract_file("firmware-update/dpAP.img", "/dev/block/bootdevice/by-name/apdp");
+package_extract_file("firmware-update/dtbo.img", "/dev/block/bootdevice/by-name/dtbo");
+package_extract_file("firmware-update/tz.img", "/dev/block/bootdevice/by-name/tz");
+package_extract_file("firmware-update/modem.img", "/dev/block/bootdevice/by-name/modem");
+package_extract_file("firmware-update/DRIVER.img", "/dev/block/bootdevice/by-name/DRIVER");
+package_extract_file("firmware-update/qupv3fw.img", "/dev/block/bootdevice/by-name/qupfw");
+package_extract_file("firmware-update/oppo_sec.img", "/dev/block/bootdevice/by-name/oppo_sec");
+package_extract_file("firmware-update/vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta");
+package_extract_file("firmware-update/splash.img", "/dev/block/bootdevice/by-name/splash");
+package_extract_file("firmware-update/devcfg.img", "/dev/block/bootdevice/by-name/devcfg");
+package_extract_file("firmware-update/dpMSA.img", "/dev/block/bootdevice/by-name/msadp");
+package_extract_file("firmware-update/BTFM.img", "/dev/block/bootdevice/by-name/bluetooth");
+package_extract_file("firmware-update/static_nvbk.img", "/dev/block/bootdevice/by-name/oppostanvbk");
+package_extract_file("firmware-update/dspso.img", "/dev/block/bootdevice/by-name/dsp");
+package_extract_file("firmware-update/cmnlib.img", "/dev/block/bootdevice/by-name/cmnlib");
+package_extract_file("firmware-update/cmnlib64.img", "/dev/block/bootdevice/by-name/cmnlib64");
+package_extract_file("firmware-update/aop.img", "/dev/block/bootdevice/by-name/aop");
+package_extract_file("firmware-update/storsec.img", "/dev/block/bootdevice/by-name/storsec");
+package_extract_file("firmware-update/keymaster64.img", "/dev/block/bootdevice/by-name/keymaster");
+package_extract_file("firmware-update/hyp.img", "/dev/block/bootdevice/by-name/hyp");
+), "");
+msm.boot_update("backup");
+msm.boot_update("finalize");
+mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/userdata", "/data", "");
+delete_recursive("/cache/backup/");
+delete_recursive("/data/data/com.chinamworld.main/.cache/");
+delete_recursive("/data/data/com.kiloo.subwaysurf/.cache/");
+delete_recursive("/data/data/com.gome.eshopnew/.cache/");
+delete_recursive("/data/data/com.shane.littlecartoonist/.jiagu");
+delete_recursive("/data/data/com.imangi.templerun2/.cache/");
+delete_recursive("/data/user/0/com.tencent.mm/app_cache/");
+delete_recursive("/data/user/0/com.tencent.mm/tinker");
+delete_recursive("/data/user/999/com.tencent.mm/app_cache/");
+delete_recursive("/data/user/999/com.tencent.mm/tinker");
+delete_recursive("/data/user/0/com.eg.android.AlipayGphone/dexpatch/workspace/host/");
+delete_recursive("/data/user/0/com.xunmeng.pinduoduo/tinker/");
+delete_recursive("/data/oppo/oae/s/");
+delete("/data/data/com.happyelements.AndroidAnimal/files/appsdk0_.dex",
+       "/data/property/persist.sys.usb.config",
+       "/data/property/persist.sys.usb.config.extra",
+       "/data/system/job/jobs.xml");
+set_progress(1.000000);
+unmount("/data");
