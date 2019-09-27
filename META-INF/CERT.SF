@@ -1,0 +1,112 @@
+Signature-Version: 1.0
+SHA1-Digest-Manifest: k3IhG3M+VqB57pHSNDnvldsxv4c=
+Created-By: 1.0 (Android SignApk)
+
+Name: META-INF/com/google/android/updater-script
+SHA1-Digest-Manifest: MXXY1pJlGNWIdlcTbCCXsto5A/Q=
+
+Name: firmware-update/storsec.img
+SHA1-Digest-Manifest: gIlYTB2ibcagCJaQZWNTu3uFedI=
+
+Name: firmware-update/keymaster64.img
+SHA1-Digest-Manifest: khUeUq2wTMwLVIstxL1ZYSoFd5s=
+
+Name: firmware-update/aop.img
+SHA1-Digest-Manifest: x390oefreNpXKSNRqlMt8krJmd8=
+
+Name: firmware-update/qupv3fw.img
+SHA1-Digest-Manifest: Cpg+/jFMYgz55wVDJ7oSdn+kGjE=
+
+Name: firmware-update/BTFM.img
+SHA1-Digest-Manifest: v0hrFkmNFDFwy3GYgt1qa7E4BUk=
+
+Name: firmware-update/devcfg.img
+SHA1-Digest-Manifest: jMpNc61gBaixj4dhffrI655faus=
+
+Name: compatibility.zip
+SHA1-Digest-Manifest: wt6JQFdIPoa1L/ZDHFcZ69y/4DY=
+
+Name: system.patch.dat
+SHA1-Digest-Manifest: 774VWw1Wa8Y+IPKHHCeM6N//yzE=
+
+Name: firmware-update/xbl.img
+SHA1-Digest-Manifest: Pb0DqQn4zg7NhmWNpK1K1dCsG/Y=
+
+Name: firmware-update/DRIVER.img
+SHA1-Digest-Manifest: Mt5qPlfLFnEd33PIy++BaK+i68A=
+
+Name: system.transfer.list
+SHA1-Digest-Manifest: KbN5UcfZ7wX3Ayp9x+DzlB9vTuI=
+
+Name: META-INF/com/android/metadata
+SHA1-Digest-Manifest: TsFk2rYKbK89LrFE0q5/Qk/tcQE=
+
+Name: firmware-update/dpAP.img
+SHA1-Digest-Manifest: m1kO1mEcr0lp3KNT7j1jJns0fv0=
+
+Name: firmware-update/dtbo.img
+SHA1-Digest-Manifest: vtlFqvvRiCNcT3Y6jOxHAQnip84=
+
+Name: firmware-update/hyp.img
+SHA1-Digest-Manifest: /9f6BGRg9uGLvMt4pnd83KrGPPc=
+
+Name: firmware-update/dpMSA.img
+SHA1-Digest-Manifest: GVFvyqcJw2FAODrIpyhi4rb6Xio=
+
+Name: firmware-update/xbl_config.img
+SHA1-Digest-Manifest: VP/6C3vnoAvRLFfnbdvQlicpyFA=
+
+Name: firmware-update/modem.img
+SHA1-Digest-Manifest: wLTQlX4ZBQmzhrFJtcJJ0bC0SR8=
+
+Name: META-INF/com/android/otacert
+SHA1-Digest-Manifest: UtzvteHUGOuT4A05rqIX8Rv5UoA=
+
+Name: META-INF/com/google/android/update-binary
+SHA1-Digest-Manifest: KbUDaGgDMjI7O71Ke/avX0Xor7o=
+
+Name: vendor.patch.dat
+SHA1-Digest-Manifest: FGxh8AKe7Jf6bDNWX6tLn6TB/xA=
+
+Name: firmware-update/cmnlib64.img
+SHA1-Digest-Manifest: GIbdGY4Fkw8m1nrFL5JImqxCHok=
+
+Name: vendor.new.dat.br
+SHA1-Digest-Manifest: 8neSojVZU/FC+/nyxRQHKidDcr0=
+
+Name: boot.img
+SHA1-Digest-Manifest: XNhuxysK4NhcuNnF6XAnkYMoa7s=
+
+Name: firmware-update/dspso.img
+SHA1-Digest-Manifest: mxiWmJz8vOpz85urwxOHpTZo15c=
+
+Name: firmware-update/splash.img
+SHA1-Digest-Manifest: kdklaC4e4vn1Bxb6owT7RC9V6+c=
+
+Name: firmware-update/oppo_sec.img
+SHA1-Digest-Manifest: E1yKl3vttsGTXpNx5VhDwp9vJR8=
+
+Name: firmware-update/vbmeta.img
+SHA1-Digest-Manifest: 3gRZsFm2cFFAXTM49I2DhqU7XV4=
+
+Name: vendor.transfer.list
+SHA1-Digest-Manifest: pW165SEAeEk1GySNY2KqFIPb3vM=
+
+Name: system.new.dat.br
+SHA1-Digest-Manifest: opH6MpFYzMngSfx8vxTu4HDgTvI=
+
+Name: META-INF/com/google/android/removable_images.txt
+SHA1-Digest-Manifest: /w++Q29GIngqpIB6RlF1fB3DoTA=
+
+Name: firmware-update/abl.img
+SHA1-Digest-Manifest: Sc/xV1rBcbfe9n4dbufA0/Eo7Gg=
+
+Name: firmware-update/cmnlib.img
+SHA1-Digest-Manifest: KWCrO/COABxwPN89TwEAfIWBbsk=
+
+Name: firmware-update/static_nvbk.img
+SHA1-Digest-Manifest: 4Zaq8xZxzNREdJhb3HIuH+5Abo0=
+
+Name: firmware-update/tz.img
+SHA1-Digest-Manifest: uJ17gqUp8Z7Li0oqi/7bYyVzhMY=
+
